@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var lengthOfLastWord = function(s) {
+    //     let index = s.length - 1;
+    //     while (s[index] === ' ') {
+    //         index--;
+    //     }
+    //     let wordLength = 0;
+    //     while (index >= 0 && s[index] !== ' ') {
+    //         wordLength++;
+    //         index--;
+    //     }
+    //     return wordLength;
+// var leng=3;
+// console.log(--leng);
+    //i++是先执行再自增。++i是先自增再执行。++和--都是这个道理
+    var lengthOfLastWord= function (s){
+        let index=s.length-1;
+        while(s[index]===' '){
+            // window.alert(index--);//最后一个是空，那么执行index,然后index 不执行，是判断
+            // window.alert(index)
+            --index;
+        }
+        let wordlength=0;
+        while(s[index]!==' '&&index>0){
+            wordlength++;
+            index--;
+        }
+        return wordlength;
+    };
+   //  var lengthOfLastWord=function (s){
+   //     let index =s.length-1;
+   //     while(s[index]===' '){
+   //         --index;
+   //     }
+   //     let wordlength=0;//如果他等于
+   //      while(s[index]!== ' '&& index >=0 ){
+   //         //h 0 e 1 no
+   //          wordlength++;
+   //          index--;
+   //      }
+   //  }
+   //
+   var s=lengthOfLastWord('hello wor ')
+    console.log(s)
+</script>
+</body>
+</html>

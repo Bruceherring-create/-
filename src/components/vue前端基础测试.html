@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+</div>
+<div id="counter">
+    Counter: {{ counter }}
+</div>
+<script>
+    const Counter = {
+        data() {
+            return {
+                counter: 0
+            }
+        }
+    }
+
+    Vue.createApp(Counter).mount('#counter')
+    const hel={
+        data(){
+            return{
+                message:'zhjoh'
+            }
+        }
+    }
+    //估计这里是搞一个实例，然后将这个实例放到这个，前端里面去
+    const app=Vue.createApp(hel).mount('#app');
+</script>
+</body>
+</html>

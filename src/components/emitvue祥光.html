@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id='leo'>
+    {{msg}}
+    <bbb-aaa @go="parentfn" @sky="lol"></bbb-aaa>
+</div>
+<script>
+    Vue.createApp({data(){return {
+            "msg":"父组件的数据"
+        }},
+        "methods":{
+        lol(){
+                alert(2);
+            },
+        parentfn(dataname){
+            alert(dataname)
+            this.msg='我被子组件修改'
+        }
+        }
+    }).component("bbb-aaa",{
+        data(){
+            return {
+                "bbbmsg":"子组件的数据"
+            }
+        },
+        "methods":{
+            childfn()
+            {
+                this.$emit('go',123)
+                this.$emit('sky')
+            }
+        },
+        "template":'<div @click="childfn">{{bbbmsg}}</div>'}
+
+    ).mount('#leo')
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function PriceList(...arguments) {
+const obj = {
+id:[...arguments][0],
+adjustItemsld:[...arguments][1],
+dimensionId:[...arguments][2],
+}
+return obj
+}
+const data = [
+PriceList(id = "2fa6ee62-d0fe-4e78-a84e-c228e3344f4d",
+adjustItemsId = "e061aa19-59e6-4bab-bb4a-1d4aa9f6e9ef",
+dimensionId = null,
+dimensionCode = null,
+dimensionName = null,
+dimensionType = 0,
+productName = null,
+productCode = null,
+product = "95832d39-9856-4a7d-9ec8-3baeb4f427a7",
+SKUName = null,
+SKUCode = null,
+SKU = "97580289-6108-4c29-af08-85a83abcae30",
+measureUnit = "2f83bc78-34e6-40cf-9745-1aa50bf783db",
+measureUnitName = null,
+price = 322.00000000,
+startDate = "2022-04-01 08:00:00.0",
+endDate = null,
+tenant = "O202202081613002675764",
+tenantName = null,
+tenantCode = null),
+PriceList(id = "7d338f82-0fd7-4fe4-8c26-241786a92082",
+adjustItemsId = "a358ced1-2c77-45ed-8aa6-c539cc412c9c",
+dimensionId = null, dimensionCode = null, dimensionName = null,
+dimensionType = 0, productName = null, productCode = null,
+product = "95832d39-9856-4a7d-9ec8-3baeb4f427a7",
+SKUName = null, SKUCode = null,
+SKU = "a89855d1-a6ad-4f31-b109-4e42e0367bd8",
+measureUnit = "2f83bc78-34e6-40cf-9745-1aa50bf783db",
+measureUnitName = null, price = 323.00000000,
+startDate = "2022-04-01 08:00:00.0", endDate = null,
+tenant = "O202202081613002675764", tenantName = null,
+tenantCode = null)
+]
+console.log(typeof(data))
+
+</script>
+</body>
+</html>
